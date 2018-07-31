@@ -16,4 +16,4 @@
 | 美校微信小程序 | 学生/家长 | 部署在公有云 | |
 
 ## License
-* [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+* [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
