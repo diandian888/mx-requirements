@@ -1,7 +1,7 @@
 digraph {
     label="教师工作时间安排流程"
 
-    node [shape="box", style="rounded"]
+    node [shape="box", style="rounded,filled", fillcolor="bisque"]
         安排上课时间 -> 安排完整2天休息日 -> 安排教研时间 ->
         安排执勤时间 -> 安排听课时间 -> 安排接待家长时间 ->
         安排市场工作时间
