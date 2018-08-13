@@ -1,10 +1,20 @@
 digraph {
-    node [shape="box", style="rounded,filled", fillcolor="bisque"]
-        安排上课时间 -> 安排完整2天休息日 -> 安排教研时间 ->
-        安排执勤时间 -> 安排听课时间 -> 安排接待家长时间 ->
-        安排市场工作时间
+    node [shape="box", style="rounded,filled", fillcolor="aquamarine"]
+        start[label="开始"];
+        end[label="结束"];
 
-        开始 -> 安排上课时间[label="通过设置班级上课时间,任课教师"]
-        安排市场工作时间 -> 安排备课时间[label="剩余的每周工作时间小时数"]
-        安排备课时间 -> 结束
+    node [shape="box", style="rounded,filled", fillcolor="bisque"]
+        s1[label="安排上课时间"];
+        s2[label="安排完整2天休息日"];
+        s3[label="安排教研时间"];
+        s4[label="安排执勤时间"];
+        s5[label="安排听课时间"];
+        s6[label="安排接待家长时间"];
+        s7[label="安排市场工作时间"];
+        s8[label="安排备课时间"];
+
+    start -> s1[label="通过设置班级上课时间,任课教师"];
+    s1 -> s2 -> s3 -> s4 -> s5 -> s6 -> s7;
+    s7 -> s8[label="剩余的每周工作时间小时数"];
+    s8 -> end;
 }

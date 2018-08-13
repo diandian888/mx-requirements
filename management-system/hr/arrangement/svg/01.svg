@@ -9,100 +9,100 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 734)">
 <title>%3</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-734 277,-734 277,5 -4,5"/>
-<!-- 安排上课时间 -->
-<g id="node1" class="node"><title>安排上课时间</title>
+<!-- start -->
+<g id="node1" class="node"><title>start</title>
+<path fill="aquamarine" stroke="black" d="M83,-730C83,-730 53,-730 53,-730 47,-730 41,-724 41,-718 41,-718 41,-706 41,-706 41,-700 47,-694 53,-694 53,-694 83,-694 83,-694 89,-694 95,-700 95,-706 95,-706 95,-718 95,-718 95,-724 89,-730 83,-730"/>
+<text text-anchor="middle" x="68" y="-708.3" font-family="Times,serif" font-size="14.00">开始</text>
+</g>
+<!-- s1 -->
+<g id="node3" class="node"><title>s1</title>
 <path fill="bisque" stroke="black" d="M107,-642C107,-642 29,-642 29,-642 23,-642 17,-636 17,-630 17,-630 17,-618 17,-618 17,-612 23,-606 29,-606 29,-606 107,-606 107,-606 113,-606 119,-612 119,-618 119,-618 119,-630 119,-630 119,-636 113,-642 107,-642"/>
 <text text-anchor="middle" x="68" y="-620.3" font-family="Times,serif" font-size="14.00">安排上课时间</text>
 </g>
-<!-- 安排完整2天休息日 -->
-<g id="node2" class="node"><title>安排完整2天休息日</title>
-<path fill="bisque" stroke="black" d="M124.25,-568C124.25,-568 11.75,-568 11.75,-568 5.75,-568 -0.25,-562 -0.25,-556 -0.25,-556 -0.25,-544 -0.25,-544 -0.25,-538 5.75,-532 11.75,-532 11.75,-532 124.25,-532 124.25,-532 130.25,-532 136.25,-538 136.25,-544 136.25,-544 136.25,-556 136.25,-556 136.25,-562 130.25,-568 124.25,-568"/>
-<text text-anchor="middle" x="68" y="-546.3" font-family="Times,serif" font-size="14.00">安排完整2天休息日</text>
-</g>
-<!-- 安排上课时间&#45;&gt;安排完整2天休息日 -->
-<g id="edge1" class="edge"><title>安排上课时间&#45;&gt;安排完整2天休息日</title>
-<path fill="none" stroke="black" d="M68,-605.937C68,-597.807 68,-587.876 68,-578.705"/>
-<polygon fill="black" stroke="black" points="71.5001,-578.441 68,-568.441 64.5001,-578.441 71.5001,-578.441"/>
-</g>
-<!-- 安排教研时间 -->
-<g id="node3" class="node"><title>安排教研时间</title>
-<path fill="bisque" stroke="black" d="M107,-494C107,-494 29,-494 29,-494 23,-494 17,-488 17,-482 17,-482 17,-470 17,-470 17,-464 23,-458 29,-458 29,-458 107,-458 107,-458 113,-458 119,-464 119,-470 119,-470 119,-482 119,-482 119,-488 113,-494 107,-494"/>
-<text text-anchor="middle" x="68" y="-472.3" font-family="Times,serif" font-size="14.00">安排教研时间</text>
-</g>
-<!-- 安排完整2天休息日&#45;&gt;安排教研时间 -->
-<g id="edge2" class="edge"><title>安排完整2天休息日&#45;&gt;安排教研时间</title>
-<path fill="none" stroke="black" d="M68,-531.937C68,-523.807 68,-513.876 68,-504.705"/>
-<polygon fill="black" stroke="black" points="71.5001,-504.441 68,-494.441 64.5001,-504.441 71.5001,-504.441"/>
-</g>
-<!-- 安排执勤时间 -->
-<g id="node4" class="node"><title>安排执勤时间</title>
-<path fill="bisque" stroke="black" d="M107,-420C107,-420 29,-420 29,-420 23,-420 17,-414 17,-408 17,-408 17,-396 17,-396 17,-390 23,-384 29,-384 29,-384 107,-384 107,-384 113,-384 119,-390 119,-396 119,-396 119,-408 119,-408 119,-414 113,-420 107,-420"/>
-<text text-anchor="middle" x="68" y="-398.3" font-family="Times,serif" font-size="14.00">安排执勤时间</text>
-</g>
-<!-- 安排教研时间&#45;&gt;安排执勤时间 -->
-<g id="edge3" class="edge"><title>安排教研时间&#45;&gt;安排执勤时间</title>
-<path fill="none" stroke="black" d="M68,-457.937C68,-449.807 68,-439.876 68,-430.705"/>
-<polygon fill="black" stroke="black" points="71.5001,-430.441 68,-420.441 64.5001,-430.441 71.5001,-430.441"/>
-</g>
-<!-- 安排听课时间 -->
-<g id="node5" class="node"><title>安排听课时间</title>
-<path fill="bisque" stroke="black" d="M107,-346C107,-346 29,-346 29,-346 23,-346 17,-340 17,-334 17,-334 17,-322 17,-322 17,-316 23,-310 29,-310 29,-310 107,-310 107,-310 113,-310 119,-316 119,-322 119,-322 119,-334 119,-334 119,-340 113,-346 107,-346"/>
-<text text-anchor="middle" x="68" y="-324.3" font-family="Times,serif" font-size="14.00">安排听课时间</text>
-</g>
-<!-- 安排执勤时间&#45;&gt;安排听课时间 -->
-<g id="edge4" class="edge"><title>安排执勤时间&#45;&gt;安排听课时间</title>
-<path fill="none" stroke="black" d="M68,-383.937C68,-375.807 68,-365.876 68,-356.705"/>
-<polygon fill="black" stroke="black" points="71.5001,-356.441 68,-346.441 64.5001,-356.441 71.5001,-356.441"/>
-</g>
-<!-- 安排接待家长时间 -->
-<g id="node6" class="node"><title>安排接待家长时间</title>
-<path fill="bisque" stroke="black" d="M121.25,-272C121.25,-272 14.75,-272 14.75,-272 8.75,-272 2.75,-266 2.75,-260 2.75,-260 2.75,-248 2.75,-248 2.75,-242 8.75,-236 14.75,-236 14.75,-236 121.25,-236 121.25,-236 127.25,-236 133.25,-242 133.25,-248 133.25,-248 133.25,-260 133.25,-260 133.25,-266 127.25,-272 121.25,-272"/>
-<text text-anchor="middle" x="68" y="-250.3" font-family="Times,serif" font-size="14.00">安排接待家长时间</text>
-</g>
-<!-- 安排听课时间&#45;&gt;安排接待家长时间 -->
-<g id="edge5" class="edge"><title>安排听课时间&#45;&gt;安排接待家长时间</title>
-<path fill="none" stroke="black" d="M68,-309.937C68,-301.807 68,-291.876 68,-282.705"/>
-<polygon fill="black" stroke="black" points="71.5001,-282.441 68,-272.441 64.5001,-282.441 71.5001,-282.441"/>
-</g>
-<!-- 安排市场工作时间 -->
-<g id="node7" class="node"><title>安排市场工作时间</title>
-<path fill="bisque" stroke="black" d="M121.25,-198C121.25,-198 14.75,-198 14.75,-198 8.75,-198 2.75,-192 2.75,-186 2.75,-186 2.75,-174 2.75,-174 2.75,-168 8.75,-162 14.75,-162 14.75,-162 121.25,-162 121.25,-162 127.25,-162 133.25,-168 133.25,-174 133.25,-174 133.25,-186 133.25,-186 133.25,-192 127.25,-198 121.25,-198"/>
-<text text-anchor="middle" x="68" y="-176.3" font-family="Times,serif" font-size="14.00">安排市场工作时间</text>
-</g>
-<!-- 安排接待家长时间&#45;&gt;安排市场工作时间 -->
-<g id="edge6" class="edge"><title>安排接待家长时间&#45;&gt;安排市场工作时间</title>
-<path fill="none" stroke="black" d="M68,-235.937C68,-227.807 68,-217.876 68,-208.705"/>
-<polygon fill="black" stroke="black" points="71.5001,-208.441 68,-198.441 64.5001,-208.441 71.5001,-208.441"/>
-</g>
-<!-- 安排备课时间 -->
-<g id="node9" class="node"><title>安排备课时间</title>
-<path fill="bisque" stroke="black" d="M107,-110C107,-110 29,-110 29,-110 23,-110 17,-104 17,-98 17,-98 17,-86 17,-86 17,-80 23,-74 29,-74 29,-74 107,-74 107,-74 113,-74 119,-80 119,-86 119,-86 119,-98 119,-98 119,-104 113,-110 107,-110"/>
-<text text-anchor="middle" x="68" y="-88.3" font-family="Times,serif" font-size="14.00">安排备课时间</text>
-</g>
-<!-- 安排市场工作时间&#45;&gt;安排备课时间 -->
-<g id="edge8" class="edge"><title>安排市场工作时间&#45;&gt;安排备课时间</title>
-<path fill="none" stroke="black" d="M68,-161.597C68,-149.746 68,-133.817 68,-120.292"/>
-<polygon fill="black" stroke="black" points="71.5001,-120.084 68,-110.084 64.5001,-120.084 71.5001,-120.084"/>
-<text text-anchor="middle" x="154" y="-132.3" font-family="Times,serif" font-size="14.00">剩余的每周工作时间小时数</text>
-</g>
-<!-- 开始 -->
-<g id="node8" class="node"><title>开始</title>
-<path fill="bisque" stroke="black" d="M83,-730C83,-730 53,-730 53,-730 47,-730 41,-724 41,-718 41,-718 41,-706 41,-706 41,-700 47,-694 53,-694 53,-694 83,-694 83,-694 89,-694 95,-700 95,-706 95,-706 95,-718 95,-718 95,-724 89,-730 83,-730"/>
-<text text-anchor="middle" x="68" y="-708.3" font-family="Times,serif" font-size="14.00">开始</text>
-</g>
-<!-- 开始&#45;&gt;安排上课时间 -->
-<g id="edge7" class="edge"><title>开始&#45;&gt;安排上课时间</title>
+<!-- start&#45;&gt;s1 -->
+<g id="edge1" class="edge"><title>start&#45;&gt;s1</title>
 <path fill="none" stroke="black" d="M68,-693.597C68,-681.746 68,-665.817 68,-652.292"/>
 <polygon fill="black" stroke="black" points="71.5001,-652.084 68,-642.084 64.5001,-652.084 71.5001,-652.084"/>
 <text text-anchor="middle" x="170" y="-664.3" font-family="Times,serif" font-size="14.00">通过设置班级上课时间,任课教师</text>
 </g>
-<!-- 结束 -->
-<g id="node10" class="node"><title>结束</title>
-<path fill="bisque" stroke="black" d="M83,-36C83,-36 53,-36 53,-36 47,-36 41,-30 41,-24 41,-24 41,-12 41,-12 41,-6 47,-0 53,-0 53,-0 83,-0 83,-0 89,-0 95,-6 95,-12 95,-12 95,-24 95,-24 95,-30 89,-36 83,-36"/>
+<!-- end -->
+<g id="node2" class="node"><title>end</title>
+<path fill="aquamarine" stroke="black" d="M83,-36C83,-36 53,-36 53,-36 47,-36 41,-30 41,-24 41,-24 41,-12 41,-12 41,-6 47,-0 53,-0 53,-0 83,-0 83,-0 89,-0 95,-6 95,-12 95,-12 95,-24 95,-24 95,-30 89,-36 83,-36"/>
 <text text-anchor="middle" x="68" y="-14.3" font-family="Times,serif" font-size="14.00">结束</text>
 </g>
-<!-- 安排备课时间&#45;&gt;结束 -->
-<g id="edge9" class="edge"><title>安排备课时间&#45;&gt;结束</title>
+<!-- s2 -->
+<g id="node4" class="node"><title>s2</title>
+<path fill="bisque" stroke="black" d="M124.25,-568C124.25,-568 11.75,-568 11.75,-568 5.75,-568 -0.25,-562 -0.25,-556 -0.25,-556 -0.25,-544 -0.25,-544 -0.25,-538 5.75,-532 11.75,-532 11.75,-532 124.25,-532 124.25,-532 130.25,-532 136.25,-538 136.25,-544 136.25,-544 136.25,-556 136.25,-556 136.25,-562 130.25,-568 124.25,-568"/>
+<text text-anchor="middle" x="68" y="-546.3" font-family="Times,serif" font-size="14.00">安排完整2天休息日</text>
+</g>
+<!-- s1&#45;&gt;s2 -->
+<g id="edge2" class="edge"><title>s1&#45;&gt;s2</title>
+<path fill="none" stroke="black" d="M68,-605.937C68,-597.807 68,-587.876 68,-578.705"/>
+<polygon fill="black" stroke="black" points="71.5001,-578.441 68,-568.441 64.5001,-578.441 71.5001,-578.441"/>
+</g>
+<!-- s3 -->
+<g id="node5" class="node"><title>s3</title>
+<path fill="bisque" stroke="black" d="M107,-494C107,-494 29,-494 29,-494 23,-494 17,-488 17,-482 17,-482 17,-470 17,-470 17,-464 23,-458 29,-458 29,-458 107,-458 107,-458 113,-458 119,-464 119,-470 119,-470 119,-482 119,-482 119,-488 113,-494 107,-494"/>
+<text text-anchor="middle" x="68" y="-472.3" font-family="Times,serif" font-size="14.00">安排教研时间</text>
+</g>
+<!-- s2&#45;&gt;s3 -->
+<g id="edge3" class="edge"><title>s2&#45;&gt;s3</title>
+<path fill="none" stroke="black" d="M68,-531.937C68,-523.807 68,-513.876 68,-504.705"/>
+<polygon fill="black" stroke="black" points="71.5001,-504.441 68,-494.441 64.5001,-504.441 71.5001,-504.441"/>
+</g>
+<!-- s4 -->
+<g id="node6" class="node"><title>s4</title>
+<path fill="bisque" stroke="black" d="M107,-420C107,-420 29,-420 29,-420 23,-420 17,-414 17,-408 17,-408 17,-396 17,-396 17,-390 23,-384 29,-384 29,-384 107,-384 107,-384 113,-384 119,-390 119,-396 119,-396 119,-408 119,-408 119,-414 113,-420 107,-420"/>
+<text text-anchor="middle" x="68" y="-398.3" font-family="Times,serif" font-size="14.00">安排执勤时间</text>
+</g>
+<!-- s3&#45;&gt;s4 -->
+<g id="edge4" class="edge"><title>s3&#45;&gt;s4</title>
+<path fill="none" stroke="black" d="M68,-457.937C68,-449.807 68,-439.876 68,-430.705"/>
+<polygon fill="black" stroke="black" points="71.5001,-430.441 68,-420.441 64.5001,-430.441 71.5001,-430.441"/>
+</g>
+<!-- s5 -->
+<g id="node7" class="node"><title>s5</title>
+<path fill="bisque" stroke="black" d="M107,-346C107,-346 29,-346 29,-346 23,-346 17,-340 17,-334 17,-334 17,-322 17,-322 17,-316 23,-310 29,-310 29,-310 107,-310 107,-310 113,-310 119,-316 119,-322 119,-322 119,-334 119,-334 119,-340 113,-346 107,-346"/>
+<text text-anchor="middle" x="68" y="-324.3" font-family="Times,serif" font-size="14.00">安排听课时间</text>
+</g>
+<!-- s4&#45;&gt;s5 -->
+<g id="edge5" class="edge"><title>s4&#45;&gt;s5</title>
+<path fill="none" stroke="black" d="M68,-383.937C68,-375.807 68,-365.876 68,-356.705"/>
+<polygon fill="black" stroke="black" points="71.5001,-356.441 68,-346.441 64.5001,-356.441 71.5001,-356.441"/>
+</g>
+<!-- s6 -->
+<g id="node8" class="node"><title>s6</title>
+<path fill="bisque" stroke="black" d="M121.25,-272C121.25,-272 14.75,-272 14.75,-272 8.75,-272 2.75,-266 2.75,-260 2.75,-260 2.75,-248 2.75,-248 2.75,-242 8.75,-236 14.75,-236 14.75,-236 121.25,-236 121.25,-236 127.25,-236 133.25,-242 133.25,-248 133.25,-248 133.25,-260 133.25,-260 133.25,-266 127.25,-272 121.25,-272"/>
+<text text-anchor="middle" x="68" y="-250.3" font-family="Times,serif" font-size="14.00">安排接待家长时间</text>
+</g>
+<!-- s5&#45;&gt;s6 -->
+<g id="edge6" class="edge"><title>s5&#45;&gt;s6</title>
+<path fill="none" stroke="black" d="M68,-309.937C68,-301.807 68,-291.876 68,-282.705"/>
+<polygon fill="black" stroke="black" points="71.5001,-282.441 68,-272.441 64.5001,-282.441 71.5001,-282.441"/>
+</g>
+<!-- s7 -->
+<g id="node9" class="node"><title>s7</title>
+<path fill="bisque" stroke="black" d="M121.25,-198C121.25,-198 14.75,-198 14.75,-198 8.75,-198 2.75,-192 2.75,-186 2.75,-186 2.75,-174 2.75,-174 2.75,-168 8.75,-162 14.75,-162 14.75,-162 121.25,-162 121.25,-162 127.25,-162 133.25,-168 133.25,-174 133.25,-174 133.25,-186 133.25,-186 133.25,-192 127.25,-198 121.25,-198"/>
+<text text-anchor="middle" x="68" y="-176.3" font-family="Times,serif" font-size="14.00">安排市场工作时间</text>
+</g>
+<!-- s6&#45;&gt;s7 -->
+<g id="edge7" class="edge"><title>s6&#45;&gt;s7</title>
+<path fill="none" stroke="black" d="M68,-235.937C68,-227.807 68,-217.876 68,-208.705"/>
+<polygon fill="black" stroke="black" points="71.5001,-208.441 68,-198.441 64.5001,-208.441 71.5001,-208.441"/>
+</g>
+<!-- s8 -->
+<g id="node10" class="node"><title>s8</title>
+<path fill="bisque" stroke="black" d="M107,-110C107,-110 29,-110 29,-110 23,-110 17,-104 17,-98 17,-98 17,-86 17,-86 17,-80 23,-74 29,-74 29,-74 107,-74 107,-74 113,-74 119,-80 119,-86 119,-86 119,-98 119,-98 119,-104 113,-110 107,-110"/>
+<text text-anchor="middle" x="68" y="-88.3" font-family="Times,serif" font-size="14.00">安排备课时间</text>
+</g>
+<!-- s7&#45;&gt;s8 -->
+<g id="edge8" class="edge"><title>s7&#45;&gt;s8</title>
+<path fill="none" stroke="black" d="M68,-161.597C68,-149.746 68,-133.817 68,-120.292"/>
+<polygon fill="black" stroke="black" points="71.5001,-120.084 68,-110.084 64.5001,-120.084 71.5001,-120.084"/>
+<text text-anchor="middle" x="154" y="-132.3" font-family="Times,serif" font-size="14.00">剩余的每周工作时间小时数</text>
+</g>
+<!-- s8&#45;&gt;end -->
+<g id="edge9" class="edge"><title>s8&#45;&gt;end</title>
 <path fill="none" stroke="black" d="M68,-73.937C68,-65.8072 68,-55.8761 68,-46.7047"/>
 <polygon fill="black" stroke="black" points="71.5001,-46.4406 68,-36.4407 64.5001,-46.4407 71.5001,-46.4406"/>
 </g>
