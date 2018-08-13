@@ -1,0 +1,36 @@
+digraph {
+    node [shape="box", style="rounded,filled", fillcolor="aquamarine"]
+        start[label="开始"];
+        end[label="结束"];
+
+    node [shape="box", style="rounded,filled", fillcolor="bisque"]
+        s1_a[label="提成比例=高中冲刺提成比例"];
+        s1_b[label="提成比例=普通高中课程提成比例"];
+        s2[label="列出所有该教师授课的上课情况(按次)"];
+        s3[label="选择需要计算课时费的上课情况\n生成上课情况列表(按次)"];
+        s4[label="从上课情况列表中取出一次上课境况"];
+        s5[label="读取这次上课情况中的应到学生列表"];
+        s6[label="从应到学生列表中取出一个学生信息"];
+        s7[label="从该学生得到的收入=\n该学生这次上课的学费x提成比例"];
+        s8[label="将从该学生得到的收入\n计入当前班级的课时费"];
+    
+    node [shape="diamond", style="rounded,filled", fillcolor="beige"]
+        c1[label="是高中冲刺班?"];
+        c2[label="上课情况列表(按次)为空?"];
+        c3[label="应到学生列表是否为空?"];
+
+    start -> c1;
+    c1 -> s1_a[label="是"];
+    c1 -> s1_b[label="否"];
+    s1_a -> s2;
+    s1_b -> s2;
+    s2 -> s3 -> c2;
+    c2 -> s4[label="否"];
+    c2 -> end[label="是"];
+    s4 -> s5 -> c3;
+    c3 -> s6[label="否"];
+    c3 -> c2[label="是"];
+    s6 -> s7 -> s8 -> c3;
+
+    {rank=same; s8 end}
+}
