@@ -5,8 +5,8 @@ digraph {
 
     node [shape="box", style="rounded,filled", fillcolor="bisque"]
         s1[label="安排上课时间"];
-        s2[label="安排完整2天休息日"];
-        s3[label="安排教研时间"];
+        s2[label="安排教研时间"];
+        s3[label="安排完整2天休息日"];
         s4[label="安排执勤时间"];
         s5[label="安排听课时间"];
         s6[label="安排接待家长时间"];
