@@ -1,0 +1,106 @@
+digraph {
+    node [shape="box", style="rounded,filled", fillcolor="aquamarine"]
+        start[label="开始"];
+        end[label="结束"];
+
+    node [shape="box", style="rounded,filled", fillcolor="bisque"]
+        s1[label="列出所有该教师授课的上课情况(按次)"];
+        s2[label="选择需要计算课时费的上课情况\n生成上课情况列表(按次)"];
+        s3[label="初始化该教师该班级的课时费=0"];
+        s4[label="读取课程信息中的学生单价,超过上限学生单价\n起算人数,下限人数,上限人数"];
+        s5[label="从上课情况列表中取出一次上课境况"];
+        s6[label="这次上课课时费=这次上课课时费x年限系数"];
+        s7[label="将这次上课的课时费计入该教师该班级的课时费"];
+        s8[label="输出该教师该班级的课时费"];
+    
+    node [shape="diamond", style="rounded,filled", fillcolor="beige"]
+        c1[label="上课情况列表(按次)为空?"];
+        c2[label="全职教师?"];
+
+    subgraph cluster1 {
+        label="计算这次上课的课时费";
+        style="filled";
+        color="aliceblue";
+
+        node [shape="box", style="rounded,filled", fillcolor="bisque"]
+            sub1_s1[label="读取这次上课情况中的应到学生人数"];
+            sub1_s2[label="读取这次上课的授课教师人数"];
+            sub1_s3_a[label="优化后上课学生人数=\n起算人数"];
+            sub1_s3_b[label="优化后上课学生人数=\n下限人数"];
+            sub1_s3_c[label="优化后上课学生人数=\n应到人数"];
+            sub1_s3_d[label="优化后上课学生人数=\n上限人数"];
+            sub1_s4[label="超过上限课时费=\n超过上限学生单价x超过上限人数"];
+            sub1_s5_a[label="这次上课的课时费=\n学生单价x优化后上课学生人数"];
+            sub1_s5_b[label="这次上课的课时费=\n学生单价x优化后上课学生人数\n+超过上限课时费"];
+            sub1_s6[label="这次上课的课时费=\n这次上课的课时费/这次上课的授课教师人数"];
+            sub1_s7[label="输出这次上课的课时费"];
+
+        sub1_s1 -> sub1_s2;
+        sub1_s2 -> sub1_s3_a[label="应到学生人数<起算人数"];
+        sub1_s2 -> sub1_s3_b[label="应到学生人数=起算人数"];
+        sub1_s2 -> sub1_s3_c[label="下限人数<=应到学生人数<=上限人数"];
+        sub1_s2 -> sub1_s3_d[label="应到学生人数>上限人数"];
+        sub1_s3_a -> sub1_s5_a;
+        sub1_s3_b -> sub1_s5_a;
+        sub1_s3_c -> sub1_s5_a;
+        sub1_s5_a -> sub1_s6;
+        sub1_s3_d -> sub1_s4 -> sub1_s5_b -> sub1_s6;
+        sub1_s6 -> sub1_s7;
+
+        {rank=same sub1_s3_a sub1_s3_b sub1_s3_c sub1_s3_d}
+        {rank=same sub1_s5_a sub1_s5_b}
+    }
+
+    subgraph cluster2 {
+        label="计算兼职教师年限系数";
+        style="filled";
+        color="aliceblue";
+
+        node [shape="box", style="rounded,filled", fillcolor="bisque"]
+            sub2_s1[label="工作年数=当前年份-入职年份"];
+            sub2_s2_a[label="年限系数=1"]
+            sub2_s2_b[label="年限系数=\n1+0.01x(工作年数-1)"];
+            sub2_s2_c[label="年限系数=\n1+6年的年限系数"];
+            sub2_s2_d[label="年限系数=\n1+7年的年限系数"];
+            sub2_s2_e[label="年限系数=\n1+8年的年限系数"];
+            sub2_s2_f[label="年限系数=\n1+9年的年限系数"];
+            sub2_s2_g[label="年限系数=\n1+10年及以上的年限系数"];
+            sub2_s3[label="输出年限系数"];
+
+        sub2_s1 -> sub2_s2_a[label="工作年数<2"];
+        sub2_s1 -> sub2_s2_b[label="2<=工作年数<=5"];
+        sub2_s1 -> sub2_s2_c[label="工作年数=6"];
+        sub2_s1 -> sub2_s2_d[label="工作年数=7"];
+        sub2_s1 -> sub2_s2_e[label="工作年数=8"];
+        sub2_s1 -> sub2_s2_f[label="工作年数=9"];
+        sub2_s1 -> sub2_s2_g[label="工作年数>=10"];
+
+        sub2_s2_a -> sub2_s3;
+        sub2_s2_b -> sub2_s3;
+        sub2_s2_c -> sub2_s3;
+        sub2_s2_d -> sub2_s3;
+        sub2_s2_e -> sub2_s3;
+        sub2_s2_f -> sub2_s3;
+        sub2_s2_g -> sub2_s3;
+
+        {rank=same sub2_s2_a sub2_s2_b sub2_s2_c sub2_s2_d sub2_s2_e sub2_s2_f sub2_s2_g}
+    } 
+
+    start -> s1 -> s2 -> s3 -> s4;
+    s4 -> c1;
+
+    // 上课情况列表为空
+    c1 -> s8[label="是"];
+    s8 -> end;
+
+    // 上课情况列表不为空
+    c1 -> s5[label="否"];
+    s5 -> sub1_s1;
+
+    sub1_s7 -> c2;
+    c2 -> sub2_s1[label="是"];
+    c2 -> s7[label="否"];
+
+    sub2_s3 -> s6;
+    s6 -> s7 -> c1;
+}
