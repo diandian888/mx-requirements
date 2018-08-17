@@ -60,11 +60,11 @@ digraph {
             sub2_s1[label="工作年数=当前年份-入职年份"];
             sub2_s2_a[label="年限系数=1"]
             sub2_s2_b[label="年限系数=\n1+0.01x(工作年数-1)"];
-            sub2_s2_c[label="年限系数=\n1+6年的年限系数"];
-            sub2_s2_d[label="年限系数=\n1+7年的年限系数"];
-            sub2_s2_e[label="年限系数=\n1+8年的年限系数"];
-            sub2_s2_f[label="年限系数=\n1+9年的年限系数"];
-            sub2_s2_g[label="年限系数=\n1+10年及以上的年限系数"];
+            sub2_s2_c[label="年限系数=\n6年的年限系数"];
+            sub2_s2_d[label="年限系数=\n7年的年限系数"];
+            sub2_s2_e[label="年限系数=\n8年的年限系数"];
+            sub2_s2_f[label="年限系数=\n9年的年限系数"];
+            sub2_s2_g[label="年限系数=\n10年及以上的年限系数"];
             sub2_s3[label="输出年限系数"];
 
         sub2_s1 -> sub2_s2_a[label="工作年数<2"];
