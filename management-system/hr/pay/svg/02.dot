@@ -94,7 +94,8 @@ digraph {
     s8 -> end;
 
     // 上课情况列表不为空
-    c1 -> s5[label="否"];
+    // Use rank=source to make the c1 -> s5 and subgraphic(cluster1) top of the graph.
+    {rank=source c1 -> s5[label="否"];}
     s5 -> sub1_s1;
 
     sub1_s7 -> c2;
