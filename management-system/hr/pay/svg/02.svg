@@ -138,23 +138,23 @@
 </g>
 <!-- c2 -->
 <g id="node12" class="node"><title>c2</title>
-<path fill="beige" stroke="black" d="M818.346,-468.138C818.346,-468.138 768.355,-455.862 768.355,-455.862 762.528,-454.431 762.528,-451.569 768.355,-450.138 768.355,-450.138 818.346,-437.862 818.346,-437.862 824.173,-436.431 835.827,-436.431 841.654,-437.862 841.654,-437.862 891.645,-450.138 891.645,-450.138 897.472,-451.569 897.472,-454.431 891.645,-455.862 891.645,-455.862 841.654,-468.138 841.654,-468.138 835.827,-469.569 824.173,-469.569 818.346,-468.138"/>
-<text text-anchor="middle" x="830" y="-449.3" font-family="Times,serif" font-size="14.00">全职教师?</text>
+<path fill="beige" stroke="black" d="M818.254,-468.544C818.254,-468.544 755.645,-455.456 755.645,-455.456 749.772,-454.228 749.772,-451.772 755.645,-450.544 755.645,-450.544 818.254,-437.456 818.254,-437.456 824.127,-436.228 835.873,-436.228 841.746,-437.456 841.746,-437.456 904.355,-450.544 904.355,-450.544 910.228,-451.772 910.228,-454.228 904.355,-455.456 904.355,-455.456 841.746,-468.544 841.746,-468.544 835.873,-469.772 824.127,-469.772 818.254,-468.544"/>
+<text text-anchor="middle" x="830" y="-449.3" font-family="Times,serif" font-size="14.00">是兼职教师?</text>
 </g>
 <!-- sub2_s1 -->
 <g id="node24" class="node"><title>sub2_s1</title>
-<path fill="bisque" stroke="black" d="M914,-362C914,-362 738,-362 738,-362 732,-362 726,-356 726,-350 726,-350 726,-338 726,-338 726,-332 732,-326 738,-326 738,-326 914,-326 914,-326 920,-326 926,-332 926,-338 926,-338 926,-350 926,-350 926,-356 920,-362 914,-362"/>
-<text text-anchor="middle" x="826" y="-340.3" font-family="Times,serif" font-size="14.00">工作年数=当前年份&#45;入职年份</text>
+<path fill="bisque" stroke="black" d="M911,-362C911,-362 735,-362 735,-362 729,-362 723,-356 723,-350 723,-350 723,-338 723,-338 723,-332 729,-326 735,-326 735,-326 911,-326 911,-326 917,-326 923,-332 923,-338 923,-338 923,-350 923,-350 923,-356 917,-362 911,-362"/>
+<text text-anchor="middle" x="823" y="-340.3" font-family="Times,serif" font-size="14.00">工作年数=当前年份&#45;入职年份</text>
 </g>
 <!-- c2&#45;&gt;sub2_s1 -->
 <g id="edge38" class="edge"><title>c2&#45;&gt;sub2_s1</title>
-<path fill="none" stroke="black" d="M829.357,-434.809C828.728,-417.961 827.758,-392.018 827.022,-372.339"/>
-<polygon fill="black" stroke="black" points="830.512,-372.011 826.641,-362.149 823.517,-372.273 830.512,-372.011"/>
-<text text-anchor="middle" x="836.5" y="-405.3" font-family="Times,serif" font-size="14.00">是</text>
+<path fill="none" stroke="black" d="M828.875,-434.809C827.773,-417.961 826.076,-392.018 824.789,-372.339"/>
+<polygon fill="black" stroke="black" points="828.267,-371.899 824.122,-362.149 821.282,-372.356 828.267,-371.899"/>
+<text text-anchor="middle" x="835.5" y="-405.3" font-family="Times,serif" font-size="14.00">是</text>
 </g>
 <!-- c2&#45;&gt;s7 -->
 <g id="edge39" class="edge"><title>c2&#45;&gt;s7</title>
-<path fill="none" stroke="black" d="M902.112,-452.677C1031.22,-452.519 1295.19,-445.547 1368,-393 1387.03,-379.267 1390,-368.467 1390,-345 1390,-345 1390,-345 1390,-91 1390,-49.9369 1154.95,-31.9329 986.198,-24.2985"/>
+<path fill="none" stroke="black" d="M914.392,-452.642C1047.27,-452.047 1297.43,-443.932 1368,-393 1387.03,-379.267 1390,-368.467 1390,-345 1390,-345 1390,-345 1390,-91 1390,-49.9369 1154.95,-31.9329 986.198,-24.2985"/>
 <polygon fill="black" stroke="black" points="986.34,-20.8014 976.195,-23.8545 986.03,-27.7946 986.34,-20.8014"/>
 <text text-anchor="middle" x="1397.5" y="-206.3" font-family="Times,serif" font-size="14.00">否</text>
 </g>
@@ -298,9 +298,9 @@
 </g>
 <!-- sub2_s1&#45;&gt;sub2_s2_a -->
 <g id="edge14" class="edge"><title>sub2_s1&#45;&gt;sub2_s2_a</title>
-<path fill="none" stroke="black" d="M725.723,-340.442C661.607,-336.768 577.23,-328.118 505,-308 479.634,-300.935 452.827,-288.68 431.801,-277.84"/>
-<polygon fill="black" stroke="black" points="433.349,-274.7 422.87,-273.143 430.091,-280.895 433.349,-274.7"/>
-<text text-anchor="middle" x="541.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数&lt;2</text>
+<path fill="none" stroke="black" d="M722.965,-340.437C659.284,-336.758 575.61,-328.104 504,-308 478.835,-300.935 452.266,-288.68 431.434,-277.84"/>
+<polygon fill="black" stroke="black" points="433.059,-274.74 422.585,-273.143 429.776,-280.923 433.059,-274.74"/>
+<text text-anchor="middle" x="540.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数&lt;2</text>
 </g>
 <!-- sub2_s2_b -->
 <g id="node26" class="node"><title>sub2_s2_b</title>
@@ -310,9 +310,9 @@
 </g>
 <!-- sub2_s1&#45;&gt;sub2_s2_b -->
 <g id="edge15" class="edge"><title>sub2_s1&#45;&gt;sub2_s2_b</title>
-<path fill="none" stroke="black" d="M725.901,-334.201C689.878,-329.035 649.41,-320.872 614,-308 594.862,-301.043 575.2,-289.875 559.329,-279.669"/>
-<polygon fill="black" stroke="black" points="561.204,-276.713 550.929,-274.131 557.351,-282.557 561.204,-276.713"/>
-<text text-anchor="middle" x="666" y="-296.3" font-family="Times,serif" font-size="14.00">2&lt;=工作年数&lt;=5</text>
+<path fill="none" stroke="black" d="M722.748,-334.043C687.329,-328.869 647.696,-320.741 613,-308 594.221,-301.104 574.963,-290.078 559.356,-279.949"/>
+<polygon fill="black" stroke="black" points="560.882,-276.76 550.619,-274.128 557,-282.586 560.882,-276.76"/>
+<text text-anchor="middle" x="665" y="-296.3" font-family="Times,serif" font-size="14.00">2&lt;=工作年数&lt;=5</text>
 </g>
 <!-- sub2_s2_c -->
 <g id="node27" class="node"><title>sub2_s2_c</title>
@@ -322,9 +322,9 @@
 </g>
 <!-- sub2_s1&#45;&gt;sub2_s2_c -->
 <g id="edge16" class="edge"><title>sub2_s1&#45;&gt;sub2_s2_c</title>
-<path fill="none" stroke="black" d="M781.347,-325.959C769.266,-320.748 756.388,-314.624 745,-308 731.199,-299.972 716.947,-289.631 705.004,-280.288"/>
-<polygon fill="black" stroke="black" points="707.14,-277.515 697.138,-274.019 702.777,-282.989 707.14,-277.515"/>
-<text text-anchor="middle" x="781.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数=6</text>
+<path fill="none" stroke="black" d="M779.439,-325.897C767.656,-320.685 755.099,-314.577 744,-308 730.625,-300.074 716.827,-289.943 705.184,-280.732"/>
+<polygon fill="black" stroke="black" points="707.105,-277.786 697.124,-274.233 702.711,-283.235 707.105,-277.786"/>
+<text text-anchor="middle" x="780.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数=6</text>
 </g>
 <!-- sub2_s2_d -->
 <g id="node28" class="node"><title>sub2_s2_d</title>
@@ -334,9 +334,9 @@
 </g>
 <!-- sub2_s1&#45;&gt;sub2_s2_d -->
 <g id="edge17" class="edge"><title>sub2_s1&#45;&gt;sub2_s2_d</title>
-<path fill="none" stroke="black" d="M824.419,-325.812C823.334,-314.011 821.869,-298.072 820.612,-284.404"/>
-<polygon fill="black" stroke="black" points="824.061,-283.689 819.66,-274.051 817.09,-284.33 824.061,-283.689"/>
-<text text-anchor="middle" x="859.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数=7</text>
+<path fill="none" stroke="black" d="M822.012,-325.812C821.334,-314.011 820.418,-298.072 819.632,-284.404"/>
+<polygon fill="black" stroke="black" points="823.106,-283.834 819.037,-274.051 816.117,-284.236 823.106,-283.834"/>
+<text text-anchor="middle" x="857.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数=7</text>
 </g>
 <!-- sub2_s2_e -->
 <g id="node29" class="node"><title>sub2_s2_e</title>
@@ -346,9 +346,9 @@
 </g>
 <!-- sub2_s1&#45;&gt;sub2_s2_e -->
 <g id="edge18" class="edge"><title>sub2_s1&#45;&gt;sub2_s2_e</title>
-<path fill="none" stroke="black" d="M867.4,-325.847C878.325,-320.675 889.882,-314.599 900,-308 912.053,-300.139 924.252,-290.042 934.475,-280.841"/>
-<polygon fill="black" stroke="black" points="936.886,-283.378 941.873,-274.03 932.145,-278.229 936.886,-283.378"/>
-<text text-anchor="middle" x="958.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数=8</text>
+<path fill="none" stroke="black" d="M864.507,-325.98C875.695,-320.768 887.578,-314.64 898,-308 910.368,-300.12 922.959,-290.02 933.534,-280.821"/>
+<polygon fill="black" stroke="black" points="936.043,-283.273 941.191,-274.013 931.392,-278.042 936.043,-283.273"/>
+<text text-anchor="middle" x="956.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数=8</text>
 </g>
 <!-- sub2_s2_f -->
 <g id="node30" class="node"><title>sub2_s2_f</title>
@@ -358,9 +358,9 @@
 </g>
 <!-- sub2_s1&#45;&gt;sub2_s2_f -->
 <g id="edge19" class="edge"><title>sub2_s1&#45;&gt;sub2_s2_f</title>
-<path fill="none" stroke="black" d="M926.031,-327.499C950.256,-322.454 975.837,-316.027 999,-308 1020.8,-300.447 1043.82,-289.167 1062.57,-279.042"/>
-<polygon fill="black" stroke="black" points="1064.32,-282.071 1071.4,-274.185 1060.95,-275.937 1064.32,-282.071"/>
-<text text-anchor="middle" x="1073.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数=9</text>
+<path fill="none" stroke="black" d="M923.109,-327.511C947.611,-322.455 973.527,-316.018 997,-308 1019.17,-300.428 1042.64,-289.146 1061.75,-279.024"/>
+<polygon fill="black" stroke="black" points="1063.62,-281.994 1070.76,-274.17 1060.3,-275.832 1063.62,-281.994"/>
+<text text-anchor="middle" x="1072.5" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数=9</text>
 </g>
 <!-- sub2_s2_g -->
 <g id="node31" class="node"><title>sub2_s2_g</title>
@@ -370,9 +370,9 @@
 </g>
 <!-- sub2_s1&#45;&gt;sub2_s2_g -->
 <g id="edge20" class="edge"><title>sub2_s1&#45;&gt;sub2_s2_g</title>
-<path fill="none" stroke="black" d="M926.152,-335.853C981.925,-330.621 1052.34,-321.937 1114,-308 1147.7,-300.381 1184.4,-288.25 1213.63,-277.62"/>
-<polygon fill="black" stroke="black" points="1215.06,-280.821 1223.24,-274.081 1212.64,-274.252 1215.06,-280.821"/>
-<text text-anchor="middle" x="1215" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数&gt;=10</text>
+<path fill="none" stroke="black" d="M923.167,-335.922C979.429,-330.7 1050.66,-322.002 1113,-308 1146.91,-300.384 1183.85,-288.252 1213.26,-277.622"/>
+<polygon fill="black" stroke="black" points="1214.75,-280.806 1222.93,-274.083 1212.34,-274.232 1214.75,-280.806"/>
+<text text-anchor="middle" x="1214" y="-296.3" font-family="Times,serif" font-size="14.00">工作年数&gt;=10</text>
 </g>
 <!-- sub2_s3 -->
 <g id="node32" class="node"><title>sub2_s3</title>

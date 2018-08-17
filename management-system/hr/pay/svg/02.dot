@@ -15,7 +15,7 @@ digraph {
     
     node [shape="diamond", style="rounded,filled", fillcolor="beige"]
         c1[label="上课情况列表(按次)为空?"];
-        c2[label="全职教师?"];
+        c2[label="是兼职教师?"];
 
     subgraph cluster1 {
         label="计算这次上课的课时费";
