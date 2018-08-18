@@ -1,0 +1,72 @@
+digraph {
+    node [shape="box", style="rounded,filled", fillcolor="aquamarine"]
+        start[label="开始"];
+        end[label="结束"];
+
+    node [shape="box", style="rounded,filled", fillcolor="bisque"]
+        s1[label="选择一个教师"];
+        s2[label="选定一个月份"];
+        s3[label="初始化实际课时费=0\n基本工资扣除=0"];
+        s_c1_y1[label="读取该教师基本工资包含的上课次数"];
+        s_c1_n1[label="计算兼职教师的年限系数\n(详见兼职教师年限系数流程图)"];
+        s_c1_n2[label="实际课时费=课时费总和x年限系数"];
+        s_c1_y2_b[label="基本工资扣除=\n(基本工资包含的上课次数-上课次数总和)x指定课时费"];
+        s_c1_y2_c1[label="平均课时费=课时费总和/上课次数总和"];
+        s_c1_y2_c2[label="实际课时费=\n课时费总和-平均课时费x基本工资包含的上课次数"];
+        s_c1_n2[label="实际课时费=课时费总和x年限系数"];
+        s4[label="输出实际课时费"];
+        s5[label="输出基本工资扣除"];
+
+    node [shape="diamond", style="rounded,filled", fillcolor="beige"]
+        c1[label="全职教师?"];
+
+    subgraph cluster1 {
+        label="计算该教师当月上课班级的课时费总和"
+        style="filled";
+        color="aliceblue";
+
+        node [shape="box", style="rounded,filled", fillcolor="bisque"]
+            sub1_s1[label="列出该教师在该月上过课的所有班级"];
+            sub1_s2[label="选择需要发放薪资的班级,\n生成班级列表"];
+            sub1_s3[label="初始化课时费总和=0\n上课次数总和=0"];
+            sub1_s_c1_y1[label="输出课时费总和,\n上课次数总和"];
+            sub1_s_c1_n1[label="从班级列表中取出一个班级"];
+            sub1_s_c1_n2[label="列出当前班级所有上课情况(按次)"]
+            sub1_s_c1_n3[label="选择需要计算课时费的上课情况,\n生成上课情况列表"];
+            sub1_s_c1_n4[label="计算给定班级的上课情况列表的课时费\n(详见课时费计算流程图)"];
+            sub1_s_c1_n5[label="将课时费计入课时费总和"];
+            sub1_s_c1_n6[label="将上课情况列表的上课次数\n计入上课次数总和"];
+
+        node [shape="diamond", style="rounded,filled", fillcolor="beige"]
+            sub1_c1[label="班级列表为空?"];
+
+        sub1_s1 -> sub1_s2 -> sub1_s3 -> sub1_c1;
+
+        sub1_c1 -> sub1_s_c1_y1[label="是"];
+        sub1_c1 -> sub1_s_c1_n1[label="否"];
+
+        sub1_s_c1_n1 -> sub1_s_c1_n2 -> sub1_s_c1_n3 -> sub1_s_c1_n4 -> sub1_s_c1_n5 -> sub1_s_c1_n6;
+        sub1_s_c1_n6 -> sub1_c1;
+    }
+    
+    start -> s1 -> s2 -> s3 -> sub1_s1;
+    sub1_s_c1_y1 -> c1;
+    
+    c1 -> s_c1_y1[label="是"];
+    c1 -> s_c1_n1[label="否"];
+
+    // 全职教师
+    s_c1_y1 -> s4[label="上课次数总和=基本工资包含的上课次数"]; 
+    s_c1_y1 -> s_c1_y2_b[label="上课次数总和<基本工资包含的上课次数"];
+    s_c1_y1 -> s_c1_y2_c1[label="上课次数总和>基本工资包含的上课次数"];
+
+    s4 -> s5 -> end;
+    s_c1_y2_b -> s4;
+    s_c1_y2_c1 -> s_c1_y2_c2 -> s4;
+
+    // 兼职教师
+    s_c1_n1 -> s_c1_n2;
+    s_c1_n2 -> s4;
+ 
+    {rank=max end}
+}
