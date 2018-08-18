@@ -4,20 +4,22 @@ digraph {
         end[label="结束"];
 
     node [shape="box", style="rounded,filled", fillcolor="bisque"]
-        s1[label="列出该班级所有上课情况(按次)"];
+        s1[label="列出该班级中该教师应上课的上课情况(按次)\n(教师出现在一次课的应上课教师列表中)"];
         s2[label="选择需要计算课时费的上课情况\n生成上课情况列表(按次)"];
         s3[label="初始化该班级的课时费=0"];
-        s_c1_y_1[label="提成比例=高中冲刺提成比例"];
-        s_c1_n_1[label="提成比例=普通高中课程提成比例"];
-        s_c2_y_1[label="输出该班级的课时费"];
-        s_c2_n_1[label="从上课情况列表中取出一次上课境况"];
-        s_c2_n_2[label="读取这次上课情况中的应到学生列表"];
-        s_c2_n_3[label="初始化这次上课课时费=0"];
-        s_c3_y_1[label="将这次上课的课时费计入该班级的课时费"];
-        s_c3_n_1[label="从应到学生列表中取出一个学生信息"];
-        s_c4_y_1[label="从该学生得到的收入=\n该学生这次上课的学费x提成比例"];
-        s_c4_n_1[label="从该学生得到的收入=一个固定值"];
-        s_c4_after_1[label="将从该学生得到的收入\n计入这次上课的课时费"];
+        s_c1_y1[label="提成比例=高中冲刺提成比例"];
+        s_c1_n1[label="提成比例=普通高中课程提成比例"];
+        s_c2_y1[label="输出该班级的课时费"];
+        s_c2_n1[label="从上课情况列表中取出一次上课境况"];
+        s_c2_n2[label="读取这次上课情况中的应到学生列表"];
+        s_c2_n3[label="初始化这次上课课时费=0"];
+        s_c2_n4[label="读取该次上课的应上课教师数量"];
+        s_c3_y1[label="将这次上课的课时费计入该班级的课时费"];
+        s_c3_n1[label="从应到学生列表中取出一个学生信息"];
+        s_c4_y1[label="从该学生得到的收入=\n该学生这次上课的学费x提成比例"];
+        s_c4_n1[label="从该学生得到的收入=一个固定值"];
+        s_c4_after_1[label="从该学生得到的收入=\n从该学生得到的收入/应上课教师数量"];
+        s_c4_after_2[label="将从该学生得到的收入\n计入这次上课的课时费"];
     
     node [shape="diamond", style="rounded,filled", fillcolor="beige"]
         c1[label="是高中冲刺班?"];
@@ -26,26 +28,26 @@ digraph {
         c4[label="学生是高中生?"];
 
     start -> s1 -> s2 -> s3 -> c1;
-    c1 -> s_c1_y_1[label="是"];
-    c1 -> s_c1_n_1[label="否"];
-    s_c1_y_1 -> c2;
-    s_c1_n_1 -> c2;
+    c1 -> s_c1_y1[label="是"];
+    c1 -> s_c1_n1[label="否"];
+    s_c1_y1 -> c2;
+    s_c1_n1 -> c2;
 
-    c2 -> s_c2_y_1[label="是"];
-    c2 -> s_c2_n_1[label="否"];
-    s_c2_y_1 -> end;
+    c2 -> s_c2_y1[label="是"];
+    c2 -> s_c2_n1[label="否"];
+    s_c2_y1 -> end;
 
-    s_c2_n_1 -> s_c2_n_2 -> s_c2_n_3 -> c3;
-    c3 -> s_c3_y_1[label="是"];
-    c3 -> s_c3_n_1[label="否"];
+    s_c2_n1 -> s_c2_n2 -> s_c2_n3 -> s_c2_n4 -> c3;
+    c3 -> s_c3_y1[label="是"];
+    c3 -> s_c3_n1[label="否"];
   
-    s_c3_y_1 -> c2;
-    s_c3_n_1 -> c4;
-    c4 -> s_c4_y_1[label="是"];
-    c4 -> s_c4_n_1[label="否"];
-    s_c4_y_1 -> s_c4_after_1;
-    s_c4_n_1 -> s_c4_after_1;
-    s_c4_after_1 -> c3;
+    s_c3_y1 -> c2;
+    s_c3_n1 -> c4;
+    c4 -> s_c4_y1[label="是"];
+    c4 -> s_c4_n1[label="否"];
+    s_c4_y1 -> s_c4_after_1;
+    s_c4_n1 -> s_c4_after_1;
+    s_c4_after_1 -> s_c4_after_2 -> c3;
 
     {rank=max end}
 }

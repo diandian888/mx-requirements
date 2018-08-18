@@ -4,13 +4,13 @@ digraph {
         end[label="结束"];
 
     node [shape="box", style="rounded,filled", fillcolor="bisque"]
-        s1[label="列出该班级所有上课情况(按次)"];
+        s1[label="列出该班级中该教师应上课的上课情况(按次)\n(教师出现在一次课的应上课教师列表中)"];
         s2[label="选择需要计算课时费的上课情况\n生成上课情况列表(按次)"];
         s3[label="初始化该班级的课时费=0"];
         s4[label="读取课程信息中的学生单价,超上限学生单价,\n起算人数,下限人数,上限人数"];
-        s_c1_y_1[label="输出该班级的课时费"];
-        s_c1_n_1[label="从上课情况列表中取出一次上课境况"];
-        s_c1_n_2[label="将这次上课的课时费计入该班级的课时费"];
+        s_c1_y1[label="输出该班级的课时费"];
+        s_c1_n1[label="从上课情况列表中取出一次上课情况"];
+        s_c1_n2[label="将这次上课的课时费计入该班级的课时费"];
     
     node [shape="diamond", style="rounded,filled", fillcolor="beige"]
         c1[label="上课情况列表(按次)为空?"];
@@ -22,45 +22,48 @@ digraph {
 
         node [shape="box", style="rounded,filled", fillcolor="bisque"]
             sub1_s1[label="读取这次上课情况中的应到学生人数"];
-            sub1_s2_a[label="优化后人数=起算人数"];
-            sub1_s2_b[label="优化后人数=下限人数"];
-            sub1_s2_c[label="优化后人数=应到人数"];
-            sub1_s2_d[label="优化后人数=上限人数,\n超上限人数=应到人数-上限人数"];
-            sub1_s3[label="课时费=学生单价x优化后人数"];
-            sub1_c1_y_1[label="超上限课时费=超上限单价x超上限人数"];
-            sub1_c1_y_2[label="课时费=课时费+超上限课时费"];
-            sub1_s4[label="输出这次上课的课时费"];
+            sub1_s2[label="读取该次上课的应上课教师数量"];
+            sub1_s3_a[label="优化后人数=起算人数"];
+            sub1_s3_b[label="优化后人数=下限人数"];
+            sub1_s3_c[label="优化后人数=应到人数"];
+            sub1_s3_d[label="优化后人数=上限人数,\n超上限人数=应到人数-上限人数"];
+            sub1_s4[label="课时费=学生单价x优化后人数"];
+            sub1_c1_y1[label="超上限课时费=超上限单价x超上限人数"];
+            sub1_c1_y2[label="课时费=课时费+超上限课时费"];
+            sub1_s5[label="课时费=课时费/应上课教师数量"];
+            sub1_s6[label="输出这次上课的课时费"];
         
         node [shape="diamond", style="rounded,filled", fillcolor="beige"]
             sub1_c1[label="超上限人数>0?"];
 
-        sub1_s1 -> sub1_s2_a[label="应到学生人数<起算人数"];
-        sub1_s1 -> sub1_s2_b[label="应到学生人数=起算人数"];
-        sub1_s1 -> sub1_s2_c[label="下限人数<=应到学生人数<=上限人数"];
-        sub1_s1 -> sub1_s2_d[label="应到学生人数>上限人数"];
-        sub1_s2_a -> sub1_s3;
-        sub1_s2_b -> sub1_s3;
-        sub1_s2_c -> sub1_s3;
-        sub1_s2_d -> sub1_s3;
+        sub1_s1 -> sub1_s2;
+        sub1_s2 -> sub1_s3_a[label="应到学生人数<起算人数"];
+        sub1_s2 -> sub1_s3_b[label="应到学生人数=起算人数"];
+        sub1_s2 -> sub1_s3_c[label="下限人数<=应到学生人数<=上限人数"];
+        sub1_s2 -> sub1_s3_d[label="应到学生人数>上限人数"];
+        sub1_s3_a -> sub1_s4;
+        sub1_s3_b -> sub1_s4;
+        sub1_s3_c -> sub1_s4;
+        sub1_s3_d -> sub1_s4;
 
-        sub1_s3 -> sub1_c1;
-        sub1_c1 -> sub1_c1_y_1[label="是"];
-        sub1_c1 -> sub1_s4[label="否"];
+        sub1_s4 -> sub1_c1;
+        sub1_c1 -> sub1_c1_y1[label="是"];
+        sub1_c1 -> sub1_s5[label="否"];
 
-        sub1_c1_y_1 -> sub1_c1_y_2 -> sub1_s4;
+        sub1_c1_y1 -> sub1_c1_y2 -> sub1_s5
+        sub1_s5 -> sub1_s6;
 
-        {rank=same sub1_s2_a sub1_s2_b sub1_s2_c sub1_s2_d}
+        {rank=same sub1_s3_a sub1_s3_b sub1_s3_c sub1_s3_d}
         {rank=max sub1_s4}
     }
-    start -> s1 -> s2 -> s3 -> s4;
-    s4 -> c1;
+    start -> s1 -> s2 -> s3 -> s4 -> c1;
 
-    c1 -> s_c1_y_1[label="是"];
-    c1 -> s_c1_n_1[label="否"];
+    c1 -> s_c1_y1[label="是"];
+    c1 -> s_c1_n1[label="否"];
 
-    s_c1_y_1 -> end;
-    s_c1_n_1 -> sub1_s1;
+    s_c1_y1 -> end;
+    s_c1_n1 -> sub1_s1;
 
-    sub1_s4 -> s_c1_n_2;
-    s_c1_n_2 -> c1; 
+    sub1_s6 -> s_c1_n2;
+    s_c1_n2 -> c1; 
 }
