@@ -6,11 +6,13 @@ digraph {
     node [shape="box", style="rounded,filled", fillcolor="bisque"]
         s1[label="列出该班级中该教师应上课的上课情况(按次)\n(教师出现在一次课的应上课教师列表中)"];
         s2[label="选择需要计算课时费的上课情况\n生成上课情况列表(按次)"];
-        s3[label="初始化该班级的课时费=0"];
+        s3[label="初始化该班级的课时费=0\n上课次数=0\n初始化班级课次对应的课时费报表"];
         s4[label="读取课程信息中的学生单价,超上限学生单价,\n起算人数,下限人数,上限人数"];
         s_c1_y1[label="输出该班级的课时费"];
+        s_c1_y2[label="输出该班级的班级课次对应的课时费报表"];
         s_c1_n1[label="从上课情况列表中取出一次上课情况"];
         s_c1_n2[label="将这次上课的课时费计入该班级的课时费"];
+        s_c1_n3[label="新增这次上课的班级,课次,课时费记录\n插入班级课次对应的课时费报表"];
     
     node [shape="diamond", style="rounded,filled", fillcolor="beige"]
         c1[label="上课情况列表(按次)为空?"];
@@ -61,9 +63,9 @@ digraph {
     c1 -> s_c1_y1[label="是"];
     c1 -> s_c1_n1[label="否"];
 
-    s_c1_y1 -> end;
+    s_c1_y1 -> s_c1_y2 -> end;
     s_c1_n1 -> sub1_s1;
 
     sub1_s6 -> s_c1_n2;
-    s_c1_n2 -> c1; 
+    s_c1_n2 -> s_c1_n3 -> c1; 
 }
