@@ -57,7 +57,7 @@
 <!-- sub1_s1 -->
 <g id="node15" class="node"><title>sub1_s1</title>
 <path fill="bisque" stroke="black" d="M249.25,-920C249.25,-920 28.75,-920 28.75,-920 22.75,-920 16.75,-914 16.75,-908 16.75,-908 16.75,-896 16.75,-896 16.75,-890 22.75,-884 28.75,-884 28.75,-884 249.25,-884 249.25,-884 255.25,-884 261.25,-890 261.25,-896 261.25,-896 261.25,-908 261.25,-908 261.25,-914 255.25,-920 249.25,-920"/>
-<text text-anchor="middle" x="139" y="-898.3" font-family="Times,serif" font-size="14.00">列出该教师在该月上过课的所有班级</text>
+<text text-anchor="middle" x="139" y="-898.3" font-family="Times,serif" font-size="14.00">列出该教师在该月应上课的所有班级</text>
 </g>
 <!-- s3&#45;&gt;sub1_s1 -->
 <g id="edge15" class="edge"><title>s3&#45;&gt;sub1_s1</title>
