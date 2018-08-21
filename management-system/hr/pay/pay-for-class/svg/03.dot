@@ -27,7 +27,7 @@ digraph {
         color="aliceblue";
 
         node [shape="box", style="rounded,filled", fillcolor="bisque"]
-            sub1_s1[label="列出该教师在该月应上课的所有班级"];
+            sub1_s1[label="列出该教师上课的所有班级"];
             sub1_s2[label="选择需要发放薪资的班级,\n生成班级列表"];
             sub1_s3[label="初始化课时费总和=0\n上课次数总和=0"];
             sub1_s_c1_y1[label="输出课时费总和,\n上课次数总和,\n班级课次对应的课时费报表"];
