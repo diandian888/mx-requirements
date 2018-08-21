@@ -17,6 +17,7 @@ digraph {
         s4[label="输出实际课时费"];
         s5[label="输出基本工资扣除"];
         s6[label="输出班级课次对应的课时费报表"];
+        s7[label="生成一条新的薪资记录:\n包括月份,教师,实际课时费,基本工资扣除,\n班级课次对应的课时费报表"];
 
     node [shape="diamond", style="rounded,filled", fillcolor="beige"]
         c1[label="全职教师?"];
@@ -62,7 +63,7 @@ digraph {
     s_c1_y1 -> s_c1_y2_b[label="上课次数总和<基本工资包含的上课次数"];
     s_c1_y1 -> s_c1_y2_c1[label="上课次数总和>基本工资包含的上课次数"];
 
-    s4 -> s5 -> s6 -> end;
+    s4 -> s5 -> s6 -> s7 -> end;
     s_c1_y2_b -> s4;
     s_c1_y2_c1 -> s_c1_y2_c2 -> s4;
 
