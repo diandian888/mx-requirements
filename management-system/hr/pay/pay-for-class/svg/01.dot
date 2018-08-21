@@ -12,22 +12,26 @@ digraph {
         s_c2_y1[label="输出该班级的课时费"];
         s_c2_y2[label="输出该班级的班级课次对应的课时费报表"];
         s_c2_n1[label="从上课情况列表中取出一次上课境况"];
-        s_c2_n2[label="读取这次上课情况中的应到学生列表"];
+        s_c2_n2[label="初始化该次上课学生列表"];
         s_c2_n3[label="初始化这次上课课时费=0"];
         s_c2_n4[label="读取该次上课的应上课教师数量"];
-        s_c3_y1[label="将这次上课的课时费计入该班级的课时费"];
-        s_c3_y2[label="新增班级,课次,这次上课课时费记录,\n插入班级课次对应的课时费报表中"];
-        s_c3_n1[label="从应到学生列表中取出一个学生信息"];
-        s_c4_y1[label="从该学生得到的收入=\n该学生这次上课的学费x提成比例"];
-        s_c4_n1[label="从该学生得到的收入=一个固定值"];
-        s_c4_after_1[label="从该学生得到的收入=\n从该学生得到的收入/应上课教师数量"];
-        s_c4_after_2[label="将从该学生得到的收入\n计入这次上课的课时费"];
+        s_c3_y1[label="该次上课学生列表=该次上课实际学生列表"];
+        s_c3_n1[label="该次上课学生列表=该次上课应到学生列表"];
+        s_c3_n2[label="为该次课时费加上'预估'属性"];
+        s_c4_y1[label="将这次上课的课时费计入该班级的课时费"];
+        s_c4_y2[label="新增班级,课次,这次上课课时费记录,\n插入班级课次对应的课时费报表中"];
+        s_c4_n1[label="从学生列表中取出一个学生信息"];
+        s_c5_y1[label="从该学生得到的收入=\n该学生这次上课的学费x提成比例"];
+        s_c5_n1[label="从该学生得到的收入=一个固定值"];
+        s_c5_after_1[label="从该学生得到的收入=\n从该学生得到的收入/应上课教师数量"];
+        s_c5_after_2[label="将从该学生得到的收入\n计入这次上课的课时费"];
     
     node [shape="diamond", style="rounded,filled", fillcolor="beige"]
         c1[label="是高中冲刺班?"];
         c2[label="上课情况列表(按次)为空?"];
-        c3[label="应到学生列表是否为空?"];
-        c4[label="学生是高中生?"];
+        c3[label="该次上课已结束?"];
+        c4[label="学生列表是否为空?"];
+        c5[label="学生是高中生?"];
 
     start -> s1 -> s2 -> s3 -> c1;
     c1 -> s_c1_y1[label="是"];
@@ -40,16 +44,25 @@ digraph {
     s_c2_y1 -> s_c2_y2 -> end;
 
     s_c2_n1 -> s_c2_n2 -> s_c2_n3 -> s_c2_n4 -> c3;
+
     c3 -> s_c3_y1[label="是"];
     c3 -> s_c3_n1[label="否"];
-  
-    s_c3_y1 -> s_c3_y2 -> c2;
-    s_c3_n1 -> c4;
+
+    s_c3_y1 -> c4;
+    s_c3_n1 -> s_c3_n2 -> c4;
+
+
     c4 -> s_c4_y1[label="是"];
     c4 -> s_c4_n1[label="否"];
-    s_c4_y1 -> s_c4_after_1;
-    s_c4_n1 -> s_c4_after_1;
-    s_c4_after_1 -> s_c4_after_2 -> c3;
+  
+    s_c4_y1 -> s_c4_y2 -> c2;
+    s_c4_n1 -> c5;
+    c5 -> s_c5_y1[label="是"];
+    c5 -> s_c5_n1[label="否"];
+    s_c5_y1 -> s_c5_after_1;
+    s_c5_n1 -> s_c5_after_1;
+    s_c5_after_1 -> s_c5_after_2 -> c4;
 
+    {rank=same s_c3_y1 s_c3_n1}
     {rank=max end}
 }
