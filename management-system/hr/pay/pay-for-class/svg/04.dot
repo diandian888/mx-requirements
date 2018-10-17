@@ -1,0 +1,55 @@
+digraph {
+    node [shape="box", style="rounded,filled", fillcolor="aquamarine"]
+        start[label="开始"];
+        end[label="结束"];
+
+    node [shape="box", style="rounded,filled", fillcolor="bisque"]
+        s1[label="选择一个教师"];
+        s2[label="选定一个月份"];
+        s4[label="初始化该教师薪资扣除表\n(该教师每次被代课的薪资扣除\n及发给代课教师的课时费)"];
+        s5[label="计算该教师实际课时费\n(详见流程图)"];
+        s6[label="得到班级课次对应课时费报表"];
+        s7[label="在班级课次对应课时费报表中\n查找被代课的上课记录\n生成被代课报表"];
+        s_c1_y1[label="输出该教师薪资扣除表"];
+        s_c1_n1[label="从被代课报表中取出1次代课记录"];
+
+    node [shape="diamond", style="rounded,filled", fillcolor="beige"]
+        c1[label="被代课报表是否为空?"];
+
+    subgraph cluster1 {
+        label="计算该次被代课需要扣除的薪资";
+        style="filled";
+        color="aliceblue";
+
+        node [shape="box", style="rounded,filled", fillcolor="bisque"]
+            sub1_s1[label="初始薪资扣除=0"];
+            sub1_s_c1_y1[label=""];
+            sub1_s_c2_n1[label="薪资扣除=该次课的课时费"];
+            sub1_s_c2_y1[label="薪资扣除=一个固定值"];
+
+        node [shape="diamond", style="rounded,filled", fillcolor="beige"]
+            sub1_c1[label="被代课教师是全职教师?"];
+            sub1_c2[label="该教师当月实际上课次数<该教师基本薪资包括的上课次数?"];
+    }
+
+    subgraph cluster2 {
+        label="计算该次代课老师得到的代课费"
+        style="filled";
+        color="aliceblue";
+
+        node [shape="box", style="rounded,filled", fillcolor="bisque"]
+            sub2_s1[label="初始代课费=0"];
+            sub2_s_c1_n1[label="代课费=该次的课时费"];
+            sub2_s_c2_n1[label="薪资扣除=该次课的课时费"];
+            sub2_s_c3_y1[label="薪资扣除=一个固定值"];
+            sub2_s_c3_n1[label=
+
+        node [shape="diamond", style="rounded,filled", fillcolor="beige"]
+            sub2_c1[label="全职教师?"];
+            sub2_c2[label="代课发生在上班时间内?"];
+            sub2_c3[label="该教师当月实际上课次数"]
+            
+    }
+
+    {rank=max end}
+}
