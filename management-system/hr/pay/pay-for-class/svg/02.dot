@@ -34,16 +34,25 @@ digraph {
             sub1_c2_y2[label="课时费=课时费+超上限课时费"];
             sub1_s5[label="课时费=课时费/应上课教师数量"];
             sub1_s6[label="输出这次上课的课时费"];
+            sub1_c1_y1[label="上课学生人数=实际上课学生人数"];
+            sub1_c1_n1[label="上课学生人数=应到上课学生人数"];
         
         node [shape="diamond", style="rounded,filled", fillcolor="beige"]
             sub1_c1[label="该次上课已经结束?"];
             sub1_c2[label="超上限人数>0?"];
 
-        sub1_s1 -> sub1_s2;
-        sub1_s2 -> sub1_s3_a[label="应到学生人数<起算人数"];
-        sub1_s2 -> sub1_s3_b[label="起算人数<=应到学生人数<下限人数"];
-        sub1_s2 -> sub1_s3_c[label="下限人数<=应到学生人数<=上限人数"];
-        sub1_s2 -> sub1_s3_d[label="应到学生人数>上限人数"];
+        sub1_s1 -> sub1_c1;
+
+        sub1_c1 -> sub1_c1_y1[label="是"];
+        sub1_c1 -> sub1_c1_n1[label="否"];
+
+        sub1_c1_y1 -> sub1_s2;
+        sub1_c1_n1 -> sub1_s2;
+
+        sub1_s2 -> sub1_s3_a[label="上课学生人数<起算人数"];
+        sub1_s2 -> sub1_s3_b[label="起算人数<=上课学生人数<下限人数"];
+        sub1_s2 -> sub1_s3_c[label="下限人数<=上课学生人数<=上限人数"];
+        sub1_s2 -> sub1_s3_d[label="上课学生人数>上限人数"];
         sub1_s3_a -> sub1_s4;
         sub1_s3_b -> sub1_s4;
         sub1_s3_c -> sub1_s4;
