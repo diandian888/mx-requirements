@@ -33,7 +33,8 @@ digraph {
             sub1_c2_y1[label="超上限课时费=超上限单价x超上限人数"];
             sub1_c2_y2[label="课时费=课时费+超上限课时费"];
             sub1_s5[label="课时费=课时费/应上课教师数量"];
-            sub1_s6[label="输出这次上课的课时费"];
+            sub1_s6[label="该次课该教师的上课次数=1/应上课教师数量"];
+            sub1_s7[label="输出这次上课的课时费，该次课该教师的上课次数"];
             sub1_c1_y1[label="上课学生人数=实际上课学生人数"];
             sub1_c1_n1[label="上课学生人数=应到上课学生人数"];
         
@@ -63,7 +64,7 @@ digraph {
         sub1_c2 -> sub1_s5[label="否"];
 
         sub1_c2_y1 -> sub1_c2_y2 -> sub1_s5
-        sub1_s5 -> sub1_s6;
+        sub1_s5 -> sub1_s6 -> sub1_s7;
 
         {rank=same sub1_s3_a sub1_s3_b sub1_s3_c sub1_s3_d}
         {rank=max sub1_s4}
@@ -76,6 +77,6 @@ digraph {
     s_c1_y1 -> s_c1_y2 -> end;
     s_c1_n1 -> sub1_s1;
 
-    sub1_s6 -> s_c1_n2;
+    sub1_s7 -> s_c1_n2;
     s_c1_n2 -> s_c1_n3 -> c1; 
 }
