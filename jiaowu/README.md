@@ -3,6 +3,7 @@
 ## 基本概念
 * [年级](nianji.md)
 * [年段](nianduan.md)
+* [课程](course.md)
 * [班级](class.md)
 
 ## 教学质量评估
