@@ -9,3 +9,4 @@
 ## 教学质量评估
 * [教师教学质量评估](teaching-quality-evaluation.md)
 * [学生学习质量评估](learning-quality-evaluation.md)
+* [教师教学质量评价（V2）](teaching-quality-evaluation-v2.md)
