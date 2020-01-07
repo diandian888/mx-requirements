@@ -7,6 +7,7 @@
 * [教务](jiaowu/README.md)
 * [人事](hr/README.md)
 * [通知](notify/README.md)
+* [转班](zhuanban/README.md)
 
 ## 学生基本信息预采集项目（临时）
 * [学生基本信息预采集需求](update-student-basic-info/README.md)
