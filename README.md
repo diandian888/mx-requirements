@@ -1,6 +1,6 @@
 # 美校信息管理系统(2019)
 
-## 信息管理系统
+## 第一期需求
 * [系统设置](settings/README.md)
 * [组织机构管理](organization/README.md)
 * [学生](student/README.md)
