@@ -24,3 +24,6 @@
 
 ## 报表
 * [教师工作量报表](teacher-workload-report.md)
+
+## 转班
+* [正式班开课后学生转班](transfer-student-to-other-class.md)
