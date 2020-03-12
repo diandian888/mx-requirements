@@ -27,3 +27,4 @@
 
 ## 转班
 * [正式班开课后学生转班](transfer-student-to-other-class.md)
+* [班级的学生列表，新增“转出转入的学生”记录](add-transfer-records-for-class.md)
