@@ -29,3 +29,4 @@
 * [正式班开课后学生转班](transfer-student-to-other-class.md)
 * [班级的学生列表，新增“转出转入的学生”记录](add-transfer-records-for-class.md)
 * [在学生学籍记录中新增正式班转班记录](add-transfer-records-for-student-record.md)
+* [在学生报名的信息中，新增“来源”属性](add-enroll-type-for-student.md)
