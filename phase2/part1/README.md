@@ -21,3 +21,6 @@
 
 ## 任务
 * [将教师上课课表加入到员工任务查询展示](add-class-schedule-in-tasks-of-employee.md)
+
+## 报表
+* [教师工作量报表](teacher-workload-report.md)
