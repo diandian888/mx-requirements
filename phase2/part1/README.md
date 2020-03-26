@@ -33,3 +33,6 @@
 
 ## 班级升迁
 * [班级升迁批量修改虚拟班的学费](batch-update-class-fee.md)
+
+## 薪资计算
+* [薪资计算需求更新](https://github.com/shchnmz/mx-requirements/blob/master/hr/pay/salary.md)
