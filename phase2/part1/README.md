@@ -36,3 +36,6 @@
 
 ## 薪资计算
 * [薪资计算需求更新](https://github.com/shchnmz/mx-requirements/blob/master/hr/pay/salary.md)
+
+## HR
+* [HR需求](hr-requirements.md)
