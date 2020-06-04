@@ -39,3 +39,6 @@
 
 ## HR
 * [HR需求](hr-requirements.md)
+
+## 横表
+* [按日查看教室安排（横表）可以适用于已经关闭的班级](henbiao-for-closed-classes.md)
