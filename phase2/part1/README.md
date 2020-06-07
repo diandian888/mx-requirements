@@ -42,3 +42,6 @@
 
 ## 横表
 * [按日查看教室安排（横表）可以适用于已经关闭的班级](henbiao-for-closed-classes.md)
+
+## 班级管理
+* [为班级标签增加优先级](add-priority-of-class-tag.md)
