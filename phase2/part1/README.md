@@ -41,7 +41,7 @@
 * [HR需求](hr-requirements.md)
 
 ## 横表
-* [按日查看教室安排（横表）可以适用于已经关闭的班级](henbiao-for-closed-classes.md)
+* [班级属性新增“是否需要展示在横表”](add-show-on-hengbiao-property-for-class.md)
 * [当横表的日期对应多个学期时，需要提示选择一个学期](multiple-terms-selection-for-hengbiao.md)
 
 ## 班级管理
