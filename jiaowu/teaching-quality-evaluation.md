@@ -165,7 +165,7 @@
 
     ```
     Type A                          Type B                           Type C
-                    XXXXX                           XXXXX                            XXXXX
+                        XXXXX                           XXXXX                            XXXXX
     Count: 100        XX     XX     Count: 200        XX     XX      Count: 300        XX     XX
     Avg Score: 82   XX X     X XX   Avg Score: 78   XX X     X XX    Avg Score: 88   XX X     X XX
                XX   X   X   XX                 XX   X   X   XX                  XX   X   X   XX
@@ -173,7 +173,7 @@
     Rank B: 30%     XX    X    XX   Rank B: 32%     XX    X    XX    Rank B: 22%     XX    X    XX
     ...........      XX   X   XX    ...........      XX   X   XX     ...........      XX   X   XX
     Rank N: xx%       XX  X  XX     Rank N: xx%       XX  X  XX      Rank N: xx%       XX  X  XX
-                    XXXXX                           XXXXX                            XXXXX
+                        XXXXX                           XXXXX                            XXXXX
 
     +--+-------------+--------+------+--------+---------+-----------+-------+-------+-------+------+
     |  | Title| Term | Campus | Type | Method | Teacher | Evaluator | Class | Score | Rank  | Time |
